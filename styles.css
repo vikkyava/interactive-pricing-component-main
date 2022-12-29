@@ -6,7 +6,7 @@
   --Pale-Blue: hsl(226, 100%, 87%);
   --White: hsl (0, 0%, 100%);
   --Very-Pale-Blue: hsl(230, 100%, 99%);
-  --Light-Grayish-Blue(Empty Slider Bar): hsl(224, 65%, 95%);
+  --Light-Grayish-Blue: hsl(224, 65%, 95%);
   --Light-Grayish-Blue: hsl(223, 50%, 87%);
   --Grayish-Blue: hsl(225, 20%, 60%);
   --Dark-Desaturated-Blue: hsl(227, 35%, 25%);
@@ -94,20 +94,19 @@ hr {
 }
 
 /************* Range Input Slider *************/
-
-.range-slider {
-  -webkit-appearance: none;
-  width: 85%;
-  height: 10px;
-  border-radius: 10px;
-  background-color: var(--Soft-Cyan);
-  outline: none;
-  opacity: 0.7;
-  -webkit-transition: 0.2s;
-  transition: opacity 0.2s;
+.slidercontainer {
+  position: relative;
 }
 
-.range-slider::-webkit-slider-thumb {
+#range-slider {
+  -webkit-appearance: none;
+  width: 85%;
+  height: 8px;
+  border-radius: 5px;
+  background-color: var(--Light-Grayish-Blue);
+}
+
+#range-slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   width: 45px;
@@ -119,6 +118,8 @@ hr {
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
+  z-index: 3;
+  position: relative;
 }
 
 .amount {
@@ -303,7 +304,7 @@ input:checked + .slider:before {
     margin-right: 55px;
   }
 
-  .range-slider {
+  #range-slider {
     margin: 0px 50px 0px 50px;
   }
 
